@@ -3,11 +3,42 @@
 <head>
 	<title>Sign Form</title>
 </head>
+<style type="text/css">
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.confirm {
+		color: green;
+		font-size: 55px;
+		font-weight: 900;
+		margin-left: 20%;
+	}
+
+	.frame-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	iframe {
+		border: none;
+		height: 100vh;
+		width: 60%;
+	}
+	
+</style>
 <body>
-	<h1>This is sign form</h1>
-	<br>
-	<h1>Sign here: 
-		<a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=57ec3126-7f29-4449-a862-1dca2c3b1004&v=2&env=demo-app">Face Confirm Form</a>
-	</h1>
+	<div class="container">
+		<div class="confirm">Confirmed!</div>
+		<div class="frame-container">
+			<iframe src="https://demo.docusign.net/member/powerformsigning.aspx?powerformid=9c60fdb8-a312-44ea-aa5d-d703d49f57e5&v=2&env=demo-app" name="iframe_a"></iframe>
+		</div>
+	</div>
+
+<!-- 	<p><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=9c60fdb8-a312-44ea-aa5d-d703d49f57e5&v=2&env=demo-app" target="iframe_a">Verisign Confirmation / Integrity</a></p> -->
+	<!-- <a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=9c60fdb8-a312-44ea-aa5d-d703d49f57e5&v=2&env=demo-app">Verisign Confirmation / Integrity</a> -->
 </body>
 </html>
