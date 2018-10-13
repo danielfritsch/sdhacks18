@@ -5,5 +5,9 @@ app = Flask(__name__)
 def index():
     return "...listening..."
 
+@app.route('/sign')
+def sign():
+    return render_template('sign.html')
+
 if __name__ == "__main__":
     app.run()
