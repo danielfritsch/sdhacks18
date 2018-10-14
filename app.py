@@ -20,7 +20,6 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def index():
     return "...listening..."
 
-
 @app.after_request
 def add_cors_headers(response):
     response.headers['Access-Control-Allow-Origin'] = '*'
@@ -59,6 +58,10 @@ def face_recognition():
     else:
         return "Waiting for image"
 
+
+@app.route('/sign')
+def sign():
+    return render_template('sign.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
