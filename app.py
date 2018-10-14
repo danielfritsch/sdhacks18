@@ -35,7 +35,6 @@ app.after_request(add_cors_headers)
 @cross_origin()
 def face_recognition():
     if request.method == 'POST':
-        print(request.data)
         req = ast.literal_eval(request.data.decode("utf-8"))
         image_base64 = bytes(req["image"], 'utf-8')
 
