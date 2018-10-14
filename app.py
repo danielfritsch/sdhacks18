@@ -52,11 +52,14 @@ def face_recognition():
         match = compare_face.closest_match(get_face_points.get_face_points(image), descriptor)
         print(match)
 
-        return str(match)
+        if match:
+            return str(full_array[match][:2]) + str(match)
+        else:
+            return str(None)
 
     else:
         return "Waiting for image"
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
