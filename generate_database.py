@@ -10,4 +10,4 @@ onlyfiles = [f for f in listdir("TestImages")]
 for num, file_path in enumerate(onlyfiles):
     face = dlib.load_rgb_image("TestImages/" + file_path)
     points = get_face_points(face)
-    insert_new_face.insert("data.txt", "student{0}".format(num), num, points)
+    insert_new_face.insert("data.txt", "{0}".format(file_path[:-3]), num, points)
