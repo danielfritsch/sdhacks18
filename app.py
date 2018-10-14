@@ -30,7 +30,7 @@ def add_cors_headers(response):
 app.after_request(add_cors_headers)
 
 
-@app.route('/face_recognition', methods=['GET', 'POST'])
+@app.route('/face_recognition', methods=['POST'])
 @cross_origin()
 def face_recognition():
     if request.method == 'POST':
