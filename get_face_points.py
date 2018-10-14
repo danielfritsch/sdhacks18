@@ -2,8 +2,8 @@ import dlib
 
 
 def get_face_points(face):
-    predictor_path = "sdhacks/DlibDetectors/shape_predictor_68_face_landmarks.dat"
-    recognizer_path = "sdhacks/DlibDetectors/dlib_face_recognition_resnet_model_v1.dat"
+    predictor_path = "DlibDetectors/shape_predictor_68_face_landmarks.dat"
+    recognizer_path = "DlibDetectors/dlib_face_recognition_resnet_model_v1.dat"
 
     face_detector = dlib.get_frontal_face_detector()
     predictor = dlib.shape_predictor(predictor_path)
